@@ -1,0 +1,24 @@
+{
+    "apps":[
+        {
+            "name"                  : "nametake-bot",
+            "args"                  : ["-a", "slack"],
+            "script"                : "./bin/hubot",
+            "exec_mode"             : "fork",
+            "instances"             : 1,
+            "min_uptime"            : "200s",
+            "max_restarts"          : 0,
+            "max_memory_restart"    : "150M",
+            "watch"                 : true,
+            "ignore_watch"          : ["[\\/\\\\]\\./", "node_modules"],
+            "merge_logs"            : true,
+            "exec_interpreter"      : "bash",
+            "autorestart"           : true,
+            "vizion"                : false,
+            "env": {
+                "NODE_ENV"               : "production",
+                "PORT"                   : "8080"
+            }
+        }
+    ]
+}
