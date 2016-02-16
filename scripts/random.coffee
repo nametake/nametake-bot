@@ -9,3 +9,6 @@ module.exports = (robot) ->
 
   robot.hear /天気/i , (res) ->
     res.send "いい天気"
+
+  robot.respond /fortune/i, (res) ->
+    res.send "#{res.message.user.name}"
